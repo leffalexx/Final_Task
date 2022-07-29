@@ -19,8 +19,19 @@ string[] ThreeDigitArray(string[] array)
          resultArraySize++;
       }
    }
-
+   string[] resultArray = new string [resultArraySize];
+   
+   for (int i = 0; i < array.Length; i++)
+   {
+      if (array[i].Length <= 3)
+      {
+         resultArray[resultArrayIndex] = array[i];
+         resultArrayIndex++;
+      }
+   }
+   return resultArray;
 }
 
 ShowArray(array);
 Console.WriteLine();
+ShowArray(ThreeDigitArray(array));
